@@ -5,15 +5,11 @@ import { FaPencilAlt } from "react-icons/fa";
 import { login, logout, onUserStateChange } from "../api/firebase";
 import User from "./User";
 import Button from "./ui/Button";
+import { useAuthContext } from "./context/AuthContext";
 
 export default function Navbar() {
-  const [user, setUser] = useState();
+  const { user, login, logout } = useAuthContext();
 
-  useEffect(() => {
-    onUserStateChange((user) => {
-      setUser(user);
-    });
-  }, []);
   return (
     <header className="flex justify-between border-b border-gray-300 p-2">
       <Link to="/" className="flex items-center text-4xl text-brand">
