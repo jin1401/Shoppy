@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GiShoppingBag } from "react-icons/gi";
 import { FaPencilAlt } from "react-icons/fa";
-import { login, logout, onUserStateChange } from "../api/firebase";
 import User from "./User";
 import Button from "./ui/Button";
 import { useAuthContext } from "./context/AuthContext";
